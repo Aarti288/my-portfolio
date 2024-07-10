@@ -94,6 +94,15 @@ nav button{
     transform: translateX(100%);
   }
 
+
+ 
+  .side-panel button{
+    display:block;
+  }
+  .side-panel nav ul{
+    display:block;
+  }
+
   .side-panel.open {
     transform: translateX(0);
   }
