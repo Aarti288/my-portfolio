@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins',sans-serif;
-  height:100vh;
+  overflow: hidden;
 }
 #header{
   width:100%;
@@ -66,18 +66,65 @@ nav ul li a:hover::after {
 .header-text h1 span{
   color:#0087ca;
 }
+nav button{
+  display:none;
+}
 
 @media (max-width: 768px) {
   #header {
     height:100vh;
+    background-image: url('../public/portfolio.jpg');
+
   }
-  nav{
-    width:100vw;
+  .side-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
   }
-  nav ul li a{
+
+  .side-panel.open {
+    transform: translateX(0);
+  }
+  
+  .side-panel button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  nav ul{
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+  }
+  .side-panel.open nav ul{
+    margin-top: 80px;
+  }
+  nav ul li{
     display: none;
+    margin-top:20px;
   }
-  nav ul li button{
+  .header-text p{
+    margin-left: 35%;
+    margin-bottom:0;
+  }
+  .header-text h1{
+    font-size:20px;
+    margin-left: 35%;
+  }
+  nav button{
     display:block;
     font-size: 20px;
     cursor: pointer;
@@ -86,7 +133,17 @@ nav ul li a:hover::after {
     padding: 10px 15px;
     border: none;
   }
-  nav ul li button:hover {
+  nav button:hover {
     background-color:#444;
   }
+  .container{
+    padding:1px 2%;
+  }
+  .side-panel nav{
+    display:block;
+  }
+  .side-panel nav ul li{
+    display:block;
+  }
+  
 }

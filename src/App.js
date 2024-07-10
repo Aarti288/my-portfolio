@@ -3,12 +3,15 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [sideBar,openSideBar]=useState(false);
+  const [sideBar,setSideBar]=useState(false);
   const openSidePanel=()=>{
-    openSideBar(true);
+    setSideBar(true);
     console.log(sideBar);
     
   }
+  const closeSidePanel = () => {
+    setSideBar(false);
+  };
   return (
     <div className="App">
     <div id="header">
@@ -16,13 +19,13 @@ function App() {
         <nav>
           <h1>Aarti</h1>
           <ul>
-            <li><button onClick={openSidePanel}>☰</button></li>
             <li><a>Home</a></li>
             <li><a>About</a></li>
             <li><a>Services</a></li>
             <li><a>Portfolio</a></li>
             <li><a>Contact</a></li>
           </ul>
+          <button onClick={openSidePanel}>☰</button>
         </nav>
 
         <div className="header-text">
@@ -32,12 +35,18 @@ function App() {
       </div>
     </div>
      
-     {
-      sideBar &&
-      (
-        <div>Hello</div>
-      )
-     }
+    <div className={`side-panel ${sideBar ? 'open' : ''}`}>
+        <button onClick={closeSidePanel}>x</button>
+        <nav>
+          <ul>
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Services</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+          </nav>
+      </div>
 
     </div>
   );
