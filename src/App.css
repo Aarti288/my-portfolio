@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins',sans-serif;
+  height:100vh;
 }
 #header{
   width:100%;
@@ -32,6 +33,10 @@ nav ul li a {
   text-decoration: none;
   position: relative;
 }
+nav ul li button
+{
+  display:none;
+}
 
 nav ul li a::after {
   content: '';
@@ -60,4 +65,28 @@ nav ul li a:hover::after {
 }
 .header-text h1 span{
   color:#0087ca;
+}
+
+@media (max-width: 768px) {
+  #header {
+    height:100vh;
+  }
+  nav{
+    width:100vw;
+  }
+  nav ul li a{
+    display: none;
+  }
+  nav ul li button{
+    display:block;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  nav ul li button:hover {
+    background-color:#444;
+  }
 }

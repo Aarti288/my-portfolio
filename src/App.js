@@ -1,7 +1,14 @@
 
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [sideBar,openSideBar]=useState(false);
+  const openSidePanel=()=>{
+    openSideBar(true);
+    console.log(sideBar);
+    
+  }
   return (
     <div className="App">
     <div id="header">
@@ -9,6 +16,7 @@ function App() {
         <nav>
           <h1>Aarti</h1>
           <ul>
+            <li><button onClick={openSidePanel}>☰</button></li>
             <li><a>Home</a></li>
             <li><a>About</a></li>
             <li><a>Services</a></li>
@@ -23,6 +31,13 @@ function App() {
         </div>
       </div>
     </div>
+     
+     {
+      sideBar &&
+      (
+        <div>Hello</div>
+      )
+     }
 
     </div>
   );
