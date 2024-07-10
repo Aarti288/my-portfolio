@@ -69,6 +69,12 @@ nav ul li a:hover::after {
 nav button{
   display:none;
 }
+.side-panel button{
+  display:none;
+}
+.side-panel nav ul{
+  display:none;
+}
 
 @media (max-width: 768px) {
   #header {
