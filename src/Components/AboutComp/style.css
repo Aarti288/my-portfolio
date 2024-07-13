@@ -64,5 +64,19 @@
   .tab-content.active-tab{
     display:block;
   }
+  /* media-query for responsive purpose */
+@media (max-width:768px){
+  .about-col-1,.about-col-2{
+    flex-basis: 100%;
+  }
+  .about-col-1{
+    margin-bottom:30px;
+  }
+  .about-col-2 span{
+    font-size:30px;
+    text-align: center;
+
+  }
+}
   
   

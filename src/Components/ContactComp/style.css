@@ -1,0 +1,54 @@
+
+
+.contact-left{
+    flex-basis:35%;
+
+}
+.contact-left a p{
+    color:white;
+    text-decoration: none;
+}
+.contact-left a p i{
+    margin-right:20px;
+    text-decoration: none;
+   
+}
+.social-icons{
+    margin-top:20px;
+    transition: transform 0.5s;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size:20px;
+    margin-right:10px;
+    display:inline-block;
+    color: #abaaab;
+}
+.social-icons a:hover{
+    transform:translateY(-5px)
+}
+.contact-right {
+    flex-basis:60%;
+}
+.contact-right button{
+font-size:20px;
+font-weight: 500;
+background-color: black;
+border:1px solid #fff;
+color:#fff;
+transform: transform 0.5sec;
+}
+.contact-right button a{
+    text-decoration: none;
+    color:white;
+}
+
+.contact-right button:hover{
+    background-color: #0087ca;
+    transform:translateY(-5px);
+    cursor:pointer;
+    border:none;
+    padding:10px;
+    border-radius: 10px;
+
+}

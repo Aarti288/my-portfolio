@@ -16,7 +16,7 @@ export default function ServiceComp()
                         <div className="service-description-container">
                         <h3>{service.name}</h3>
                         <p>{service.description}</p>
-                        <a ><i class="fa fa-code-fork" aria-hidden="true"></i>Github Link 
+                        <a href="https://github.com/Aarti288"><i  class="fa fa-code-fork" aria-hidden="true"></i>Github Link 
                         </a>
                         <div><a className="active" href="#">View</a></div>
                         </div>

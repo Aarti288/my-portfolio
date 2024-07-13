@@ -10,14 +10,19 @@ export default function HomeComp(){
   const closeSidePanel = () => {
     setSideBar(false);
   };
+  const scrollView=(id)=>{
+    console.log("id is:",id);
+    // document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    
+  }
     return(
         <div id="header">
         <div className='container'>
           <nav>
             <h1>Aarti</h1>
             <ul>
-              <li><a>Home</a></li>
-              <li><a>About</a></li>
+              <li><a onClick={scrollView('header')}>Home</a></li>
+              <li><a  onClick={scrollView('about')}>About</a></li>
               <li><a>Services</a></li>
               <li><a>Portfolio</a></li>
               <li><a>Contact</a></li>

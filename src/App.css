@@ -5,3 +5,15 @@
   font-family: 'Poppins',sans-serif;
   overflow: hidden;
 }
+
+.container{
+  padding:80px 0;
+}
+.copyright{
+  width:100%;
+  text-align:center;
+  padding:25px 0;
+  background:#262626;
+  margin-top:20px;
+  font-weight: 300;
+}
