@@ -5,6 +5,15 @@
     background-size: cover;
     background-position:right center;
   }
+  .header-text p{
+       font-family:'Arial, sans-serif',;
+       color:grey;
+       font-weight:bold;
+      
+  }
+  #last-words{
+    color:white;
+  }
   .container{
     padding:10px 10%;
   }
@@ -13,6 +22,9 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+  nav h1::first-letter{
+    color:#0087ca;
   }
   nav ul li{
     display:inline-block;

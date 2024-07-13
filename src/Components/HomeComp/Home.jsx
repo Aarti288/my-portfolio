@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "../HomeComp/style.css";
 export default function HomeComp(){
   const [sideBar,setSideBar]=useState(false);
+  const [Developer,setDeveloper]=useState('Frontend Developer');
   const openSidePanel=()=>{
     setSideBar(true);
     console.log(sideBar);
@@ -15,11 +16,32 @@ export default function HomeComp(){
     // document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
     
   }
+  useEffect(()=>{
+    // let character=Developer.split("");
+    console.log("length is:",Developer.length);
+     const interval=setInterval(()=>{
+        if(Developer.length>0)
+          {
+               setDeveloper(prevDeveloper=>prevDeveloper.slice(0,-1))
+          }else{
+            console.log("length is in:",Developer.length)
+            clearInterval(interval);
+            setTimeout(() => {
+              setDeveloper('Web Developer'); // Display "Web Developer" after 1 second
+              setTimeout(() => {
+                setDeveloper('Frontend Developer'); // Display "Frontend Developer" after another 1 second
+              }, 1000);
+            }, 1000);
+          }
+
+     },1000);
+     return(()=> clearInterval(interval))
+  },[Developer])
     return(
         <div id="header">
         <div className='container'>
           <nav>
-            <h1>Aarti</h1>
+            <h1>AARTI.</h1>
             <ul>
               <li><a onClick={scrollView('header')}>Home</a></li>
               <li><a  onClick={scrollView('about')}>About</a></li>
@@ -31,8 +53,8 @@ export default function HomeComp(){
           </nav>
   
           <div className="header-text">
-            <p>Frontend Developer</p>
-            <h1>Hi,I'm <span>Aarti</span><br></br>from Pune,Maharashtra.</h1>
+            <p>WELCOME TO MY WORLD</p>
+            <h1>Hi,I'm <span>Aarti Tak</span><br></br><span>a</span>&nbsp;<span id="last-words">{Developer}</span></h1>
           </div>
         </div>
 
