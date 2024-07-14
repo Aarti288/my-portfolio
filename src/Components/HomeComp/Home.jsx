@@ -27,9 +27,9 @@ export default function HomeComp(){
             console.log("length is in:",Developer.length)
             clearInterval(interval);
             setTimeout(() => {
-              setDeveloper('Web Developer'); // Display "Web Developer" after 1 second
+              setDeveloper('Web Developer'); 
               setTimeout(() => {
-                setDeveloper('Frontend Developer'); // Display "Frontend Developer" after another 1 second
+                setDeveloper('Frontend Developer');
               }, 1000);
             }, 1000);
           }

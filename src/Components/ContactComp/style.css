@@ -52,3 +52,16 @@ transform: transform 0.5sec;
     border-radius: 10px;
 
 }
+@media (max-width:768px)
+{
+    .contact-left {
+        flex-basis: 100%;
+    }
+    .social-icons a{
+        font-size: 15px;
+        margin-right: 25px;
+    }
+    .contact-right button{
+        margin-top:20px;
+    }
+}

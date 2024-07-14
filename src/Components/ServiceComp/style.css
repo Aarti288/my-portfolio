@@ -57,36 +57,16 @@
 
   }
 
- /* .service-container:hover{
-    background:#96333344;
-   border:none;
-    transform:translateY(-5px);
-
+  /* media query */
+  @media (max-width: 600px) {
+   .service-list{
+      grid-template-columns:1fr;
+      
+   }
+   .services .container h1{
+      font-size:12px;
+   }
+   .container{
+      padding:20px;
+   }
  }
- .service-img{
-    width:100%;
-    height:150px;
-    
- }
- .service-description-container p{
-    font-size:12px;
-    
- }
- .fa-code-fork{
-    margin-right:8px;
- }
- .service-view-container div{
-    text-align:center;
-    cursor:pointer;
- }
- .service-view-container a{
-   cursor:pointer;
- }
-
- .service-view-container div .active{
-   color:#0087ca;
-    font-size:15px;
- }
-
-
- */
